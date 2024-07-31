@@ -37,7 +37,7 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- Custom settings
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 16
 
 -- Tab options
 vim.opt.tabstop = 2
@@ -49,4 +49,12 @@ vim.opt.smartindent = true
 -- Turn on relative line numbers
 vim.wo.relativenumber = true
 
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
 

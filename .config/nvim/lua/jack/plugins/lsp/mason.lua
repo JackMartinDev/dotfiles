@@ -34,7 +34,6 @@ return {
 				"tailwindcss",
 				"rust_analyzer",
 				"lua_ls",
-				"emmet_ls",
 				"prismals",
 				"pyright",
 			},

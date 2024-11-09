@@ -158,3 +158,4 @@ _fzf_comprun() {
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
